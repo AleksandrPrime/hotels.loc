@@ -160,6 +160,18 @@ html, body{
     font-weight: 400;
     line-height: 27px;
     color: white;
+    &--inline:after{
+      content:'';
+      display:block;
+      height:16px;
+      width:16px;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+      position:absolute;
+      top:7px;
+      left:7px;
+    }
   }
   &__dep-input{
     display: block;
@@ -171,9 +183,20 @@ html, body{
   }
 
   &__swap{
+    margin: 0 14px;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    &:disabled:hover{
+      cursor: default;
+    }
+  }
+  &__swap-btn{
     width: 29.812px;
     height: 15.906px;
-    padding: 0 14px;
+    fill: white;
+  }
+  &__swap:disabled &__swap-btn{
     fill: rgb(148, 196, 219);
   }
   &__ex{
@@ -192,13 +215,86 @@ html, body{
   }
   &__bot{
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
   }
+  &__check {
+    display: flex;
+    position: relative;
+    align-items: center;
+    max-width: 100px;
+    height: 30px;
+    padding: 0 10px;
+    margin: 0 20px 10px 0;
+    background-color: rgb(11, 146, 210);
+    border-radius: 6px;
+    &:after{
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 8px 0 8px 8px;
+      border-color: transparent rgb(11, 146, 210);
+      display: block;
+      width: 0;
+      z-index: 1;
+      right: -8px;
+      top: 7px;
+    }
+  }
+
+  &__round-trip{
+    margin-right: 5px;
+    &:checked:after{
+      content: url("../i/check.png");
+      width: 10px;
+      height: 8px;
+      position: absolute;
+      top:7px;
+      left:10px;
+      z-index: 10;
+    }
+  }
+
   &__select{
     width: 86px;
     height: 47px;
     background-color: white;
     border: 1px solid rgb(215, 215, 215);
     border-radius: 6px;
-
+  }
+  &__date-input{
+    padding: 0 10px;
+    max-width: 167px;
+    height: 47px;
+    margin-right: 45px;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 6px;
+    background: white url("../i/calendar.png") no-repeat 90%;
+  }
+  &__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 181px;
+    height: 47px;
+    margin-left: 45px;
+    background-image: linear-gradient(to top, rgb(247, 94, 2) 0%, rgb(251, 176, 76) 100%);
+    border: 1px solid rgb(222, 83, 0);
+    border-radius: 3px;
+    box-shadow: inset 0 2px 0 rgb(252, 194, 114);
+    cursor: pointer;
+    &-icon{
+      width: 18px;
+      height: 18px;
+      fill: white;
+    }
+    &-search{
+      padding-left: 10px;
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 27px;
+    }
   }
 }

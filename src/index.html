@@ -72,9 +72,11 @@
                             <span class="search-form__ex search-form__ex--city">St. Petersburg,</span>
                             <span class="search-form__ex search-form__ex--city">Moscow</span></div>
                     </div>
-                    <svg class="search-form__swap">
-                        <use xlink:href="i/icons/svg-symbols.svg#swap"></use>
-                    </svg>
+                    <button class="search-form__swap" disabled>
+                        <svg class="search-form__swap-btn">
+                            <use xlink:href="i/icons/svg-symbols.svg#swap"></use>
+                        </svg>
+                    </button>
                     <div class="search-form__arrival">
                         <label class="search-form__label">Arrival city:</label>
                         <input type="search" class="search-form__dep-input" placeholder="Type city name">
@@ -90,8 +92,8 @@
                         <input type="date" title="Departure date" class="search-form__date-input">
                     </div>
                     <div class="search-form__check">
-                        <input type="checkbox" title="Roundtrip" class="search-form__round-trip" value="Roundtrip">
-                        <label for="search-form" class="search-form__label search-form__label--inline">Roundtrip</label>
+                        <input type="checkbox" id="check" title="Roundtrip" class="search-form__round-trip" value="Roundtrip">
+                        <label for="check" class="search-form__label search-form__label--inline">Roundtrip</label>
                     </div>
                     <div class="search-form__date">
                         <label for="search-form" class="search-form__label">Return date:</label>
@@ -99,7 +101,7 @@
                     </div>
                     <div class="search-form__currency">
                         <label for="search-form" class="search-form__label">Currency</label>
-                        <select name="currency" id="#" class="search-form__select">
+                        <select name="currency" title="currency" id="#" class="search-form__select">
                             <option value="" class="search-form__option">USD</option>
                             <option value="" class="search-form__option">RUB</option>
                             <option value="" class="search-form__option">GBR</option>
@@ -107,6 +109,12 @@
                             <option value="" class="search-form__option">CHF</option>
                         </select>
                     </div>
+                    <button class="search-form__btn" type="submit">
+                        <svg class="search-form__btn-icon">
+                            <use xlink:href="i/icons/svg-symbols.svg#search"></use>
+                        </svg>
+                        <span class="search-form__btn-search">Search</span>
+                    </button>
                 </div>
             </form>
         </div>
