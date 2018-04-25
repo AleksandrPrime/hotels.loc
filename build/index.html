@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание сайта">
+    <meta name="keywords" content="Ключевые слова">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <script scr="#"></script>
+
+    <title>Title</title>
+</head>
+<body>
+<header class="header">
+    <div class="wrapper">
+        <div class="booster"></div>
+        <div class="header-top">
+            <nav class="menu">
+                <ul class="menu__nav">
+                    <li class="menu__list"><a href="#" class="menu__links">search tickets</a></li>
+                    <li class="menu__list"><a href="#" class="menu__links">Sapsan</a></li>
+                    <li class="menu__list"><a href="#" class="menu__links">Allegro</a></li>
+                    <li class="menu__list"><a href="#" class="menu__links">Trans-siberian</a>
+                        <svg class="menu__icon">
+                            <use xlink:href="i/icons/svg-symbols.svg#sort-down"></use>
+                        </svg>
+                    </li>
+                    <li class="menu__list"><a href="#" class="menu__links">Faq</a>
+                        <svg class="menu__icon">
+                            <use xlink:href="i/icons/svg-symbols.svg#sort-down"></use>
+                        </svg>
+                    </li>
+                    <li class="menu__list menu__list--sub"><a href="#" class="menu__links">tickets guide</a>
+                        <svg class="menu__icon">
+                            <use xlink:href="i/icons/svg-symbols.svg#sort-down"></use>
+                        </svg>
+                        <ul class="menu__sub">
+                            <li class="menu__list-sub"><a href="#" class="menu__links-sub">Group travel</a></li>
+                            <li class="menu__list-sub"><a href="#" class="menu__links-sub">Ticket types</a></li>
+                            <li class="menu__list-sub"><a href="#" class="menu__links-sub">Child policy</a></li>
+                            <li class="menu__list-sub"><a href="#" class="menu__links-sub">Change ticket request</a>
+                            </li>
+                            <li class="menu__list-sub"><a href="#" class="menu__links-sub">Cancel tickets</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a href="#" class="menu__links">contact us</a>
+                        <svg class="menu__icon">
+                            <use xlink:href="i/icons/svg-symbols.svg#sort-down"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+            <div class="authorization">
+                <svg class="authorization__icon">
+                    <use xlink:href="i/icons/svg-symbols.svg#login"></use>
+                </svg>
+                <a href="#" class="authorization__login">Sign in</a>
+            </div>
+        </div>
+        <div class="header-bot">
+            <h2 class="rus-train-tickets">Russian Train Tickets</h2>
+            <form action="" class="search-form" id="search-form" method="get">
+                <div class="search-form__top">
+                    <div class="search-form__departure">
+                        <label class="search-form__label">Departure city:</label>
+                        <input type="search" class="search-form__dep-input" placeholder="Type city name">
+                        <div class="search-form__ex-block">
+                            <span class="search-form__ex">Ex:</span>
+                            <span class="search-form__ex search-form__ex--city">St. Petersburg,</span>
+                            <span class="search-form__ex search-form__ex--city">Moscow</span></div>
+                    </div>
+                    <svg class="search-form__swap">
+                        <use xlink:href="i/icons/svg-symbols.svg#swap"></use>
+                    </svg>
+                    <div class="search-form__arrival">
+                        <label class="search-form__label">Arrival city:</label>
+                        <input type="search" class="search-form__dep-input" placeholder="Type city name">
+                        <div class="search-form__ex-block">
+                            <span class="search-form__ex">Ex:</span>
+                            <span class="search-form__ex search-form__ex--city">St. Petersburg,</span>
+                            <span class="search-form__ex search-form__ex--city">Moscow</span></div>
+                    </div>
+                </div>
+                <div class="search-form__bot">
+                    <div class="search-form__date">
+                        <label for="search-form" class="search-form__label">Departure date:</label>
+                        <input type="date" title="Departure date" class="search-form__date-input">
+                    </div>
+                    <div class="search-form__check">
+                        <input type="checkbox" title="Roundtrip" class="search-form__round-trip" value="Roundtrip">
+                        <label for="search-form" class="search-form__label search-form__label--inline">Roundtrip</label>
+                    </div>
+                    <div class="search-form__date">
+                        <label for="search-form" class="search-form__label">Return date:</label>
+                        <input type="date" title="Departure date" class="search-form__date-input search-form__date-input--disable">
+                    </div>
+                    <div class="search-form__currency">
+                        <label for="search-form" class="search-form__label">Currency</label>
+                        <select name="currency" id="#" class="search-form__select">
+                            <option value="" class="search-form__option">USD</option>
+                            <option value="" class="search-form__option">RUB</option>
+                            <option value="" class="search-form__option">GBR</option>
+                            <option value="" class="search-form__option">EUR</option>
+                            <option value="" class="search-form__option">CHF</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="booster"></div>
+    </div>
+</header>
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/svg4everybody/svg4everybody.min.js"></script>
+<script>
+    svg4everybody()
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
