@@ -256,13 +256,14 @@ html, body{
   }
 
   &__select{
-    width: 86px;
-    height: 47px;
+    //width: 86px !important;
+    //height: 47px !important;
     background-color: white;
     border: 1px solid rgb(215, 215, 215);
     border-radius: 6px;
   }
   &__date-input{
+    overflow: hidden;
     padding: 0 10px;
     max-width: 167px;
     height: 47px;
@@ -270,6 +271,13 @@ html, body{
     border: 1px solid rgb(215, 215, 215);
     border-radius: 6px;
     background: white url("../i/calendar.png") no-repeat 90%;
+    &:disabled{
+      background-color: rgb(19, 149, 211);
+      border: 1px solid rgb(0, 118, 173);
+    }
+    &:disabled::placeholder{
+      color: rgb(148, 196, 219);
+    }
   }
   &__btn{
     display: flex;
