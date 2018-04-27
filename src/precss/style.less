@@ -262,12 +262,15 @@ html, body{
     border: 1px solid rgb(215, 215, 215);
     border-radius: 6px;
   }
+  &__date{
+    max-width: 167px;
+    margin-right: 45px;
+  }
   &__date-input{
     overflow: hidden;
     padding: 0 10px;
     max-width: 167px;
     height: 47px;
-    margin-right: 45px;
     border: 1px solid rgb(215, 215, 215);
     border-radius: 6px;
     background: white url("../i/calendar.png") no-repeat 90%;
@@ -278,6 +281,10 @@ html, body{
     &:disabled::placeholder{
       color: rgb(148, 196, 219);
     }
+    &.hasDatepicker{
+      max-width: 140px;
+    }
+
   }
   &__btn{
     display: flex;
@@ -305,4 +312,74 @@ html, body{
       line-height: 27px;
     }
   }
+}
+
+#speed-button{
+  display: flex;
+  position: relative;
+  width: 86px;
+  height: 47px;
+  box-sizing: border-box;
+  padding: 15% 10%;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 6px;
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 24px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.62);
+    left: 69%;
+    top: 21%;
+    z-index: 1;
+  }
+}
+
+.ui-selectmenu-text{
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+.ui-selectmenu-icon{
+  position: absolute;
+  left: 70%;
+  z-index: 2;
+}
+.ui-menu-item{
+  height: 33px;
+  border-bottom: 1px solid rgb(215, 215, 215) !important;
+  &-wrapper{
+    height: 33px;
+    padding: 7px 1em 3px .6em !important;
+  }
+}
+
+.ui-state-active{
+  margin: 0 !important;
+  background: rgb(191, 216, 235) !important;
+  color: black !important;
+  border: none !important;
+  box-sizing: border-box !important;
+}
+
+.ui-selectmenu-menu .ui-menu{
+  overflow-y: hidden;
+  padding-bottom: 0;
+}
+
+.ui-selectmenu-button-open{
+  border-bottom: 1px solid rgb(215, 215, 215) !important;
+  background-color: white !important;
+  border-radius: 6px 6px 0 0 !important;
+  &:focus{
+    outline:0 none !important;
+  }
+}
+
+.ui-widget-content{
+  border-radius: 0 0 6px 6px !important;
 }
