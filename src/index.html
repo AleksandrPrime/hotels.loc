@@ -70,20 +70,20 @@
                 <form action="" class="search-form" id="search-form" method="get">
                     <div class="search-form__top">
                         <div class="search-form__departure">
-                            <label class="search-form__label">Departure city:</label>
+                            <label for="depart" class="search-form__label">Departure city:</label>
                             <input type="search" id="depart" class="search-form__dep-input" placeholder="Type city name">
                             <div class="search-form__ex-block">
                                 <span class="search-form__ex">Ex:</span>
                                 <span class="search-form__ex search-form__ex--city search-form__ex--imp-1">St. Petersburg,</span>
                                 <span class="search-form__ex search-form__ex--city search-form__ex--imp-1">Moscow</span></div>
                         </div>
-                        <button class="search-form__swap" disabled>
+                        <button class="search-form__swap" type="button" disabled>
                             <svg class="search-form__swap-btn">
                                 <use xlink:href="i/icons/svg-symbols.svg#swap"></use>
                             </svg>
                         </button>
                         <div class="search-form__arrival">
-                            <label class="search-form__label">Arrival city:</label>
+                            <label for="arriv" class="search-form__label">Arrival city:</label>
                             <input type="search" id="arriv" class="search-form__dep-input" placeholder="Type city name">
                             <div class="search-form__ex-block">
                                 <span class="search-form__ex">Ex:</span>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="search-form__bot">
                         <div class="search-form__date">
-                            <label for="search-form" class="search-form__label">Departure date:</label>
+                            <label for="data-1" class="search-form__label">Departure date:</label>
                             <input type="text" title="Departure date" id="data-1" class="search-form__date-input"
                                    placeholder="dd.mm.yyyy">
                         </div>
@@ -104,14 +104,14 @@
                                    class="search-form__label search-form__label--inline">Roundtrip</label>
                         </div>
                         <div class="search-form__date">
-                            <label for="search-form" class="search-form__label">Return date:</label>
+                            <label for="data-2" class="search-form__label">Return date:</label>
                             <input type="text" title="Return date" id="data-2"
                                    class="search-form__date-input search-form__date-input--disable"
                                    placeholder="dd.mm.yyyy"
                                    disabled>
                         </div>
                         <div class="search-form__currency">
-                            <label for="search-form" class="search-form__label">Currency</label>
+                            <label for="speed" class="search-form__label">Currency</label>
                             <select name="currency" title="currency" id="speed" class="search-form__select">
                                 <option value="" class="search-form__option">USD</option>
                                 <option value="" class="search-form__option">RUB</option>

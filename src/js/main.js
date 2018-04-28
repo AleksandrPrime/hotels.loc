@@ -25,17 +25,36 @@ $('.search-form__ex--city').on('click',function(e){
         $target = $(e.currentTarget);
 
     $this
-    // ищем родительский тег
         .parent()
-        // ищем братские теги по отношению к родителю
         .siblings()
-        // выбираем икомый input
         .filter('.search-form__dep-input')
-        // записываем значение
         .val($target.text()
-        // разбиваем по запятой
             .split(',')
-            // собираем снова
             .join(''));
 
+});
+
+$('#arriv').keyup(check);
+$('#depart').keyup(check);
+
+function check() {
+    let data1 = $('#depart').val();
+    let data2 = $('#arriv').val();
+
+    if(data1.length != 0 || data2.length != 0) {
+        $('.search-form__swap').prop('disabled', false);
+    } else {
+        $('.search-form__swap').prop('disabled', true);
+    }
+};
+
+$('.search-form__swap').on('click', function() {
+    let
+        $depart = $('#depart'),
+        $arriv = $('#arriv'),
+        arrivVal = $arriv.val(),
+        departVal = $depart.val();
+
+    $depart.val(arrivVal);
+    $arriv.val(departVal);
 });
