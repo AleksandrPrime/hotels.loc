@@ -34,19 +34,19 @@ $('.search-form__ex--city').on('click',function(e){
 
 });
 
-$('#arriv').keyup(check);
-$('#depart').keyup(check);
-
 function check() {
+
     let data1 = $('#depart').val();
     let data2 = $('#arriv').val();
-
     if(data1.length != 0 || data2.length != 0) {
+
         $('.search-form__swap').prop('disabled', false);
     } else {
         $('.search-form__swap').prop('disabled', true);
     }
 };
+$('#arriv').keyup(check);
+$('#depart').keyup(check);
 
 $('.search-form__swap').on('click', function() {
     let
