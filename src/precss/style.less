@@ -269,7 +269,7 @@ html, body{
       position: absolute;
       top:7px;
       left:10px;
-      z-index: 100;
+      z-index: 1000;
     }
   }
 
@@ -406,5 +406,9 @@ html, body{
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .ui-selectmenu-icon.ui-icon {
     margin-top: -9px;
+  }
+  .search-form__label--inline::after{
+    content: "";
+    display: none;
   }
 }
