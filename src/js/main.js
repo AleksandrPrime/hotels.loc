@@ -20,12 +20,6 @@ $('.menu__btn').click(function () {
     $('.menu__nav').toggleClass('menu__opened');
 });
 
-$(document).click(function(event) {
-    if ($(event.target).closest(".menu__btn").length ) return;
-    $('.menu__nav').removeClass('menu__opened').css('display', 'none');
-    event.stopPropagation();
-});
-
 $('.search-form__ex--city').on('click',function(e){
     let
         $this = $(this),
