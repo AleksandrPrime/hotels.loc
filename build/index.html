@@ -19,6 +19,9 @@
         <div class="header-top">
             <div class="wrapper-center wrapper-center--flex">
                 <nav class="menu">
+                    <div class="menu__btn">
+                        <div class="menu__burger"></div>
+                    </div>
                     <ul class="menu__nav">
                         <li class="menu__list"><a href="#" class="menu__links">search tickets</a></li>
                         <li class="menu__list"><a href="#" class="menu__links">Sapsan</a></li>
@@ -68,11 +71,11 @@
                     <div class="search-form__top">
                         <div class="search-form__departure">
                             <label class="search-form__label">Departure city:</label>
-                            <input type="search" class="search-form__dep-input" placeholder="Type city name">
+                            <input type="search" id="depart" class="search-form__dep-input" placeholder="Type city name">
                             <div class="search-form__ex-block">
                                 <span class="search-form__ex">Ex:</span>
-                                <span class="search-form__ex search-form__ex--city">St. Petersburg,</span>
-                                <span class="search-form__ex search-form__ex--city">Moscow</span></div>
+                                <span class="search-form__ex search-form__ex--city search-form__ex--imp-1">St. Petersburg,</span>
+                                <span class="search-form__ex search-form__ex--city search-form__ex--imp-1">Moscow</span></div>
                         </div>
                         <button class="search-form__swap" disabled>
                             <svg class="search-form__swap-btn">
@@ -81,11 +84,11 @@
                         </button>
                         <div class="search-form__arrival">
                             <label class="search-form__label">Arrival city:</label>
-                            <input type="search" class="search-form__dep-input" placeholder="Type city name">
+                            <input type="search" id="arriv" class="search-form__dep-input" placeholder="Type city name">
                             <div class="search-form__ex-block">
                                 <span class="search-form__ex">Ex:</span>
-                                <span class="search-form__ex search-form__ex--city">St. Petersburg,</span>
-                                <span class="search-form__ex search-form__ex--city">Moscow</span></div>
+                                <span class="search-form__ex search-form__ex--city search-form__ex--imp-2">St. Petersburg,</span>
+                                <span class="search-form__ex search-form__ex--city search-form__ex--imp-2">Moscow</span></div>
                         </div>
                     </div>
                     <div class="search-form__bot">

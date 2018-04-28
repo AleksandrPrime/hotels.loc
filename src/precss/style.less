@@ -15,10 +15,12 @@ html, body{
 .wrapper-center{
   max-width: 866px;
   margin: 0 auto;
+  padding: 0 2px;
   &--flex{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 }
 
@@ -39,6 +41,37 @@ html, body{
 .menu{
   height: 40px;
   display: flex;
+  &__btn{
+    display: none;
+    cursor: pointer;
+    padding-top: 7px;
+    &:hover{
+      background-color: rgb(247, 92, 0);
+    }
+  }
+
+  &__burger{
+    height: 5px;
+    width: 40px;
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+      &:before, &:after{
+        border-radius: 8px;
+        content: "";
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 40px;
+        background-color: white;
+        left: 0;
+        top: 10px;
+      }
+      &:after{
+        top: 20px;
+      }
+  }
+
   &__nav{
     //height: 40px;
     display: flex;
@@ -411,5 +444,66 @@ html, body{
   .search-form__label--inline::after{
     content: "";
     display: none;
+  }
+}
+
+@media screen and (max-width: 871px){
+  .menu{
+    &__btn{
+      display: block;
+    }
+
+    &__nav{
+      display: none;
+    }
+  }
+  .header-bot{
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 25px;
+
+  }
+  .search-form{
+    &__bot{
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-top: 25px;
+    }
+
+    &__btn{
+      margin-top: 50px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 554px){
+  .search-form{
+    &__check{
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 432px){
+  .search-form{
+    &__top{
+      flex-wrap: wrap;
+    }
+    &__departure, &__arrival{
+      width: calc(~"100% - 4px");
+    }
+    &__swap{
+      transform: rotate(90deg);
+      margin: 15px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 326px){
+  .search-form{
+    &__date{
+      margin-right: 5px;
+    }
   }
 }
