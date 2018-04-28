@@ -51,7 +51,7 @@ html, body{
   }
 
   &__opened{
-    display: block;
+    display: block !important;
   }
 
   &__burger{
@@ -89,6 +89,10 @@ html, body{
     display: flex;
     align-items: center;
     position: relative;
+    &:hover{
+      background-color: rgb(247, 92, 0);
+      cursor: pointer;
+    }
   }
   &__list--sub:hover &__sub{
     display: block;
@@ -458,6 +462,7 @@ html, body{
   }
 }
 
+
 @media screen and (max-width: 871px){
   .menu{
     &__btn{
@@ -466,6 +471,27 @@ html, body{
 
     &__nav{
       display: none;
+    }
+    &__list{
+      background-color: rgba(19, 149, 211, .9);
+      border: 1px solid rgb(215, 215, 215);
+      transition: all 0.1s;
+      &:first-child{
+        border-radius:6px 6px 0 0;
+      }
+      &:last-child{
+        border-radius: 0 0 6px 6px;
+      }
+    }
+    &__sub{
+      top: 0;
+      left: 34%;
+      z-index: 1;
+    }
+    &__list-sub{
+      &:first-child{
+        border-radius: 0 6px 0 0;
+      }
     }
   }
   .header-bot{

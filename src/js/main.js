@@ -60,4 +60,12 @@ $('.search-form__swap').on('click', function() {
     $arriv.val(departVal);
 });
 
+$(window).resize(function () {
+    if($(window).width() > 872 && $('.menu__nav').is(':hidden')){
+        $('.menu__nav').css('display', 'flex');
+    } else if($(window).width() < 872 && $('#burger').not('menu__opened')){
+        $('.menu__nav').css('display', 'none')
+    }
+});
+
 })
