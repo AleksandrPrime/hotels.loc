@@ -1,3 +1,5 @@
+$(function () {
+
 $('#data-1, #data-2').datepicker({
 });
 $( "#speed" ).selectmenu();
@@ -15,8 +17,13 @@ let nav = $('.menu__nav');
 
 $('.menu__btn').click(function () {
     $(nav).slideToggle(400);
-    $('.menu__nav').css('display', 'block');
+    $('.menu__nav').toggleClass('menu__opened');
+});
 
+$(document).click(function(event) {
+    if ($(event.target).closest(".menu__btn").length ) return;
+    $('.menu__nav').removeClass('menu__opened').css('display', 'none');
+    event.stopPropagation();
 });
 
 $('.search-form__ex--city').on('click',function(e){
@@ -58,3 +65,5 @@ $('.search-form__swap').on('click', function() {
     $depart.val(arrivVal);
     $arriv.val(departVal);
 });
+
+})
