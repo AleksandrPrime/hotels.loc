@@ -19,10 +19,23 @@ $('.menu__btn').click(function () {
 
 });
 
-$('.search-form__ex').on('click',function(e){
-    if($('.search-form__ex--imp-1').click) {
-        $("#depart").val($(this).text());
-    } else if ($('.search-form__ex--imp-2').click){
-        $("#arriv").val($(this).text());
-    }
+$('.search-form__ex--city').on('click',function(e){
+    let
+        $this = $(this),
+        $target = $(e.currentTarget);
+
+    $this
+    // ищем родительский тег
+        .parent()
+        // ищем братские теги по отношению к родителю
+        .siblings()
+        // выбираем икомый input
+        .filter('.search-form__dep-input')
+        // записываем значение
+        .val($target.text()
+        // разбиваем по запятой
+            .split(',')
+            // собираем снова
+            .join(''));
+
 });
